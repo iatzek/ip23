@@ -12,11 +12,17 @@ namespace ip2023
             c = -3;
 
             double delta = b * b - 4 * a * c;
-            double x1 = (-b - Math.Sqrt(delta)) / 2 * a;
-            double x2 = (-b + Math.Sqrt(delta)) / 2 * a;
 
-            Console.WriteLine("x = {0} lub x = {1}", x1, x2);
+            if (delta >= 0)
+            {
+                double x1 = (-b - Math.Sqrt(delta)) / 2 * a;
+                double x2 = (-b + Math.Sqrt(delta)) / 2 * a;
 
+                Console.WriteLine("x = {0} lub x = {1}", x1, x2);
+            } else
+            {
+                Console.WriteLine("brak rozwiązań");
+            }
         }
     }
 }
